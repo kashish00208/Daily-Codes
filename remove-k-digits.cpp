@@ -1,7 +1,12 @@
-// problem statement : Remove maximum k digits from a number to make the smallest number out of it
-// Example Input num = "1432219", k = 3 output = 1219 
-// Approach :
-// 1. Maintain a monotonic stack to store the digits of num remove highest k numbers from number and return the result.
+/*
+Problem link : https://leetcode.com/problems/remove-k-digits/
+
+
+ problem statement : Remove maximum k digits from a number to make the smallest number out of it
+ Example Input num = "1432219", k = 3 output = 1219 
+ Approach :
+ 1. Maintain a monotonic stack to store the digits of num remove highest k numbers from number and return the result.
+ */
 class Solution {
 public:
     string removeKdigits(string num, int k) {
