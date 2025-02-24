@@ -22,4 +22,24 @@ class Solution {
             get(root,ans);
             return ans;
         }
-    };
+        };
+        //Iterative approach to post order traversal
+        vector<int> postorderTraversal(TreeNode* root) {
+            if(root==NULL)return{};
+            vector<int>ans;
+            stack<TreeNode*>st;
+            st.push(root);
+            while(!st.empty()){
+                TreeNode*temp = st.top();
+                st.pop();
+                ans.push_back(temp->val);
+                if(temp->left){
+                    st.push(temp->left);
+                }
+                if(temp->right){
+                    st.push(temp->right);
+                }
+            }
+            reverse(ans.begin(),ans.end());
+            return ans;
+        }
