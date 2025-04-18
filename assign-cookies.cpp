@@ -1,10 +1,10 @@
 class Solution {
     public:
-        int findContentChildren(vector<int>& g, vector<int>& s) {
-            int n = g.size() , m = s.size() , l = 0 , r = 0 ;
-            sort(g.begin(),g.end()); sort(s.begin(),s.end());
+        int findContentChildren(vector<int>& greed, vector<int>& size) {
+            int n = greed.size() , m = size.size() , l = 0 , r = 0 ;
+            sort(greed.begin(),greed.end()); sort(size.begin(),size.end());
             while(l<m && r<n){
-                if(g[r]<=s[l]){
+                if(greed[r]<=size[l]){
                     r++;
                 }
                 l++;
