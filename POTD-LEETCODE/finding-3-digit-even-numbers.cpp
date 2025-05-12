@@ -5,7 +5,7 @@ public:
         for (int i = 0; i < digits.size(); i++)
             mpp[digits[i]]++;
 
-        vector<int> ans;
+        vector<int>  ans;
         for (int i = 1; i <= 9; i++) {
             if (mpp[i] == 0) continue;
             mpp[i]--;
